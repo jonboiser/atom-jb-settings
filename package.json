@@ -2,13 +2,13 @@
   "name": "atom-jb-settings",
   "main": "./lib/atom-jb-settings",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "My Atom snippets and keymaps",
   "keywords": [
   ],
   "activationCommands": {
     "atom-workspace": "atom-jb-settings:toggle"
   },
-  "repository": "https://github.com/atom/atom-jb-settings",
+  "repository": "https://github.com/jonboiser/atom-jb-settings",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
