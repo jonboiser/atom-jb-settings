@@ -1,0 +1,74 @@
+'.source.js.jsx':
+  'import React, { Component, PropTypes }':
+    'prefix': 'imrcp'
+    'body': 'import React, { Component, PropTypes } from \'react\';'
+
+  'import react-relay':
+    'prefix': 'imrrly'
+    'body': 'import Relay from \'react-relay\''
+
+  'component boilerplate':
+    'prefix': 'bpcc'
+    'body': """
+      /* @flow */
+      import React, { Component } from 'react';
+
+      class $1 extends Component {
+        render() {
+          return (
+            <div>
+              $1
+            </div>
+          );
+        }
+      }
+
+      export default $1;
+    """
+
+  'stateless Relay boilerplate':
+    'prefix': 'bprslc'
+    'body': """
+      /* @flow */
+      import React from 'react';
+      import Relay from 'react-relay';
+
+      type Props = {
+
+      };
+
+      function $1(props: Props) {
+        return (
+          <div>
+            $1
+          </div>
+        );
+      }
+
+      export default Relay.createContainer($1, {
+        fragments: {
+
+        },
+      });
+    """
+
+  'stateless boilerplate':
+    'prefix': 'bpslc'
+    'body': """
+      /* @flow */
+      import React from 'react';
+
+      type Props = {
+
+      };
+
+      function $1(props: Props) {
+        return (
+          <div>
+            $1
+          </div>
+        );
+      }
+
+      export default $1;
+    """

@@ -1,0 +1,68 @@
+'.source.js':
+  'Relay.QL':
+    'prefix': 'rql',
+    'body': """
+      ${1:node}: () => Relay.QL`
+        fragment on $2 {
+          $3
+        }
+      `
+    """
+
+  'mutation boilerplater':
+    'prefix': 'bpmutr'
+    'body': """
+      /* @flow */
+      /* eslint-disable class-methods-use-this */
+      import Relay, { Mutation } from 'react-relay';
+      import shortid from 'shortid';
+
+      type Props = {
+
+      };
+
+      export default class $1 extends Mutation {
+        constructor: (p: Props) => void;
+
+        static fragments = {
+
+        }
+
+        getMutation() {
+          return Relay.QL`mutation {$1}`;
+        }
+
+        getVariables() {
+          const {...reqProps} = this.props; // eslint-disable-line
+          return {
+            ...reqProps,
+            clientMutationId: shortid.generate(),
+          };
+        }
+
+        getFatQuery() {
+          return Relay.QL`
+            fragment on $1Payload {
+
+            }
+          `;
+        }
+
+        getConfigs() {
+          return [
+
+          ];
+        }
+      }
+    """
+
+  'FIELDS_CHANGE config':
+    'prefix': 'rlyfcc'
+    'body': """
+      {
+        type: 'FIELDS_CHANGE',
+        fieldIDs: {
+          $1: this.props.node.id,
+        },
+      },
+    """

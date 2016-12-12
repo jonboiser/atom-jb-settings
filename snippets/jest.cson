@@ -1,0 +1,23 @@
+'.source.js':
+  'import React, enzyme':
+    'prefix': 'imrenz'
+    'body': """
+      import React from 'react';
+      import { shallow, mount } from 'enzyme';
+    """
+
+  'jest beforeEach':
+    'prefix': 'jbfe'
+    'body': """
+      beforeEach(() => {
+        $0
+      });
+    """
+
+  'jest it':
+    'prefix': 'jit'
+    'body': """
+      it('$1', () => {
+        $0
+      });
+    """
