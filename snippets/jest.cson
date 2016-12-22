@@ -21,3 +21,19 @@
         $0
       });
     """
+
+  'jest describe':
+    'prefix': 'jdes'
+    'body': """
+      describe('$1', () => {
+        $0
+      });
+    """
+
+  'jest wrapper = mount(<...>)':
+    'prefix': 'jmount'
+    'body': 'const wrapper = mount(<$0 {...defaultProps} />);';
+
+  'jest wrapper = shallow':
+    'prefix': 'jshw'
+    'body': 'const wrapper = shallow(<$0 {...defaultProps} />);'
