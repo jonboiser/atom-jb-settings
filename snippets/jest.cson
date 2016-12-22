@@ -30,7 +30,7 @@
       });
     """
 
-  'jest wrapper = mount(<...>)':
+  'jest wrapper = mount':
     'prefix': 'jmount'
     'body': 'const wrapper = mount(<$0 {...defaultProps} />);';
 
